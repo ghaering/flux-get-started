@@ -1,4 +1,3 @@
-broken
 resources:
   - podinfo-dep.yaml
   - podinfo-hpa.yaml
