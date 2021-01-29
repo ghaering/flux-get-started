@@ -1,0 +1,6 @@
+version: 1
+patchUpdated:
+  generators:
+    - command: base64 -d secret.yaml.b64 > secret.yaml 
+    - command: kustomize build .
+  patchFile: flux.patch.yaml
