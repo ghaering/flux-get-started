@@ -2,5 +2,6 @@ version: 1
 patchUpdated:
   generators:
     - command: base64 -d secret.yaml.b64 > secret.yaml 
+    - command:  (cd $(git rev-parse --show-toplevel) && find . -type f -name "*.b64" -exec sh -c 'filename="{}"; base64 -d $filename > $filename.decrypted' \; )
     - command: kustomize build .
   patchFile: flux.patch.yaml

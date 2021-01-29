@@ -2,4 +2,4 @@ resources:
   - podinfo-dep.yaml
   - podinfo-hpa.yaml
   - podinfo-svc.yaml
-  - secret.yaml
+  - secret.yaml.b64.decrypted
